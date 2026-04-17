@@ -8,7 +8,7 @@ Follow these steps to run the game locally:
 
 1. Clone or download the repository
 git clone <your-repository-url>
-cd APP/Prancha
+cd APP/planks
 
 Or simply download and extract the ZIP file.
 
@@ -34,7 +34,7 @@ Python 3.x
 A modern web browser (Chrome, Edge, Firefox recommended)
 📁 Project Structure
 APP
-└── Prancha/
+└── planks/
     ├── index.html
     ├── (other game files)
 📌 Notes
