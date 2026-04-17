@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plank Form Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-panel">
+        <div class="hero-copy">
+          <p class="eyebrow">AI Posture Coach</p>
+          <h1>Build a stronger plank with real-time visual feedback.</h1>
+          <p class="hero-text">
+            Step into a side view, start the camera, and let the app highlight
+            whether your hips are too low, too high, or nicely stacked.
+          </p>
+        </div>
+
+        <div class="hero-actions">
+          <button id="startCameraButton" class="primary-button" type="button">
+            Start Camera Analysis
+          </button>
+          <p class="camera-note">
+            Best results: side profile, forearm or high plank, shoulders to
+            ankles visible in frame.
+          </p>
+        </div>
+
+        <div class="status-grid">
+          <article class="status-card status-card-highlight">
+            <span class="label">Form Status</span>
+            <strong id="formStatus">Waiting to start</strong>
+          </article>
+          <article class="status-card">
+            <span class="label">Primary Cue</span>
+            <strong id="primaryCue">Start the camera</strong>
+          </article>
+          <article class="status-card">
+            <span class="label">Hip Offset</span>
+            <strong id="hipOffsetValue">-- px</strong>
+          </article>
+          <article class="status-card">
+            <span class="label">Body Angle</span>
+            <strong id="bodyAngleValue">-- deg</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="analysis-layout">
+        <div class="video-card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow">Live Analysis</p>
+              <h2>Camera Pose Overlay</h2>
+            </div>
+            <span id="trackingPill" class="tracking-pill">Tracker idle</span>
+          </div>
+
+          <div class="video-stage">
+            <video id="cameraFeed" autoplay playsinline muted></video>
+            <canvas id="poseCanvas"></canvas>
+
+            <div class="stage-hud">
+              <div class="hud-badge">
+                <span class="label">Quick tip</span>
+                <strong id="hudMessage">Keep your full body side-on.</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="insights-panel">
+          <section class="panel-card feedback-card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Coach Feedback</p>
+                <h2>What to fix now</h2>
+              </div>
+            </div>
+
+            <div id="feedbackBadge" class="feedback-badge feedback-neutral">
+              Ready to analyse
+            </div>
+
+            <p id="feedbackText" class="feedback-text">
+              Start the camera and move into a side plank position.
+            </p>
+          </section>
+
+          <section class="panel-card metrics-card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Alignment</p>
+                <h2>Live Metrics</h2>
+              </div>
+            </div>
+
+            <div class="metric-list">
+              <div class="metric-item">
+                <span class="label">Hip line error</span>
+                <strong id="hipMetric">--</strong>
+              </div>
+              <div class="metric-item">
+                <span class="label">Pose confidence</span>
+                <strong id="confidenceMetric">--</strong>
+              </div>
+              <div class="metric-item">
+                <span class="label">View guidance</span>
+                <strong id="viewMetric">Side profile needed</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel-card checklist-card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow">Setup</p>
+                <h2>Best Capture Tips</h2>
+              </div>
+            </div>
+
+            <ul class="tips-list">
+              <li>Place the camera so your body is visible from shoulder to ankle.</li>
+              <li>Turn sideways rather than facing the camera directly.</li>
+              <li>Keep lighting in front of you, not behind you.</li>
+              <li>Open on `localhost` or `https` if the browser blocks camera access.</li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
