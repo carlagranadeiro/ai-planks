@@ -1,6 +1,6 @@
 🎮 Arkanoid (Python Web Version)
 
-A simple Arkanoid-style game that runs in the browser using a local Python server.
+A simple App for performing planks correctly, for those who train alone. runs in the browser using a local Python server.
 
 🚀 Getting Started
 
@@ -8,7 +8,7 @@ Follow these steps to run the game locally:
 
 1. Clone or download the repository
 git clone <your-repository-url>
-cd ARKANOID/Prancha
+cd APP/Prancha
 
 Or simply download and extract the ZIP file.
 
@@ -33,7 +33,7 @@ Don’t let the ball fall!
 Python 3.x
 A modern web browser (Chrome, Edge, Firefox recommended)
 📁 Project Structure
-
+APP
 └── Prancha/
     ├── index.html
     ├── (other game files)
