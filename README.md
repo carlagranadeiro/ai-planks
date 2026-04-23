@@ -1,4 +1,4 @@
-🎮 Arkanoid (Python Web Version)
+🎮 AI Planks
 
 A simple App for performing planks correctly, for those who train alone. runs in the browser using a local Python server.
 
@@ -8,6 +8,7 @@ Follow these steps to run the game locally:
 
 1. Clone or download the repository
 git clone <your-repository-url>
+
 cd APP/planks
 
 Or simply download and extract the ZIP file.
@@ -17,6 +18,7 @@ Or simply download and extract the ZIP file.
 Make sure you have Python installed, then run:
 
 python -m http.server 8000
+
 3. Open in your browser
 
 Go to:
